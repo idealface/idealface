@@ -50,13 +50,12 @@ nav {
 }
 
 /* 特殊樣式 */
-.firstpage {
-  opacity: 1;
-}
+.firstpage,
 .exhibition,
 .aboutus {
   opacity: 0.3;
 }
+.firstpage:hover,
 .exhibition:hover,
 .aboutus:hover {
   opacity: 1;
