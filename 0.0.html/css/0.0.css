@@ -143,7 +143,6 @@ main {
 
 .bottom:hover img.gamestart_hover_active {
   display: block;
-  transform: scale(1.05);
 }
 
 .bottom:hover img.gamestart {
