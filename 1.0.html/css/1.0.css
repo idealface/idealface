@@ -11,14 +11,13 @@ body {
   cursor: inherit;
 }
 nav {
-  padding: 0 60px;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  padding: 30px 60px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0);
 }
+
+/* 導航菜單 */
 .nav_menu {
   display: flex;
   justify-content: flex-end;
@@ -33,6 +32,43 @@ nav {
 }
 .nav_menu ul :last-child {
   margin-right: 0px;
+}
+
+/* 按鈕樣式 */
+.nav_icon,
+.right_text .title,
+.vend1,
+.vend2,
+.vend3,
+.firstpage,
+.exhibition,
+.aboutus {
+  scale: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav_icon:hover,
+.right_text .title:hover,
+.vend1:hover,
+.vend2:hover,
+.vend3:hover,
+.firstpage:hover,
+.exhibition:hover,
+.aboutus:hover {
+  scale: 1.06;
+}
+
+/* 特殊樣式 */
+.firstpage {
+  opacity: 1;
+}
+.exhibition,
+.aboutus {
+  opacity: 0.3;
+}
+.exhibition:hover,
+.aboutus:hover {
+  opacity: 1;
 }
 .boss {
   position: relative;
@@ -168,4 +204,15 @@ nav {
   to {
     transform: translateX(-100%);
   }
+}
+button {
+  background-color: transparent;
+  border: 0px;
+  cursor: url(../img/鼠標.png), auto !important;
+}
+button:hover img.default {
+  display: none;
+}
+button:hover img.hover {
+  display: block;
 }
