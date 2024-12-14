@@ -88,8 +88,6 @@ main {
 .left_vending {
   display: flex;
   justify-content: flex-start;
-  max-width: 200px;
-  height: 400px;
 }
 .left_vending .vend1 {
   position: relative;
