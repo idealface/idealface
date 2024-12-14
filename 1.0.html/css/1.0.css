@@ -36,10 +36,6 @@ nav {
 
 /* 按鈕樣式 */
 .nav_icon,
-.right_text .title,
-.vend1,
-.vend2,
-.vend3,
 .firstpage,
 .exhibition,
 .aboutus {
@@ -48,10 +44,6 @@ nav {
 }
 
 .nav_icon:hover,
-.right_text .title:hover,
-.vend1:hover,
-.vend2:hover,
-.vend3:hover,
 .firstpage:hover,
 .exhibition:hover,
 .aboutus:hover {
