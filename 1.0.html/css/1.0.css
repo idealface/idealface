@@ -10,14 +10,13 @@ body {
 * {
   cursor: inherit;
 }
+/* 導航菜單 */
 nav {
   padding: 30px 60px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-/* 導航菜單 */
 .nav_menu {
   display: flex;
   justify-content: flex-end;
