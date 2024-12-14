@@ -5,7 +5,6 @@ body {
   height: 100%;
   cursor: url(../5.0展覽館/img/鼠標.png), auto;
   background: #000 url(../img/00_background-image.png);
-  background-size: cover;
   width: 1920px;
   height: 1080;
 }
