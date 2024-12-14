@@ -1,0 +1,65 @@
+/* 全局樣式 */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  cursor: url(../6.0關於我們/img/鼠標.png), auto;
+  background: #000 url(./img/60_background-image.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+* {
+  cursor: inherit;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 導航容器 */
+nav {
+  padding: 30px 60px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 導航菜單 */
+.nav_menu {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 19px;
+}
+.nav_menu ul {
+  list-style-type: none;
+}
+.nav_menu ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+.nav_menu ul :last-child {
+  margin-right: 0px;
+}
+/* 通用按鈕樣式 */
+.nav_icon,
+.firstpage,
+.exhibition {
+  scale: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.nav_icon:hover,
+.firstpage:hover,
+.exhibition:hover {
+  scale: 1.06;
+}
+.aboutus_title {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.aboutus_title h2 {
+  width: 400px;
+  height: 150px;
+}

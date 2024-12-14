@@ -1,0 +1,171 @@
+body {
+  height: 100vh;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000 !important;
+  cursor: url(../img/鼠標.png), auto;
+}
+* {
+  cursor: inherit;
+}
+nav {
+  padding: 0 60px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+.nav_menu {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 19px;
+}
+.nav_menu ul {
+  list-style-type: none;
+}
+.nav_menu ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+.nav_menu ul :last-child {
+  margin-right: 0px;
+}
+.boss {
+  position: relative;
+
+  left: 30px;
+  width: 634px;
+  height: 895px;
+}
+.talk_gif {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  left: 250px;
+  bottom: 370px;
+}
+.eye_left {
+  position: relative;
+  left: 60px;
+  bottom: 470px;
+}
+.eye_right {
+  position: relative;
+  left: 90px;
+  bottom: 470px;
+}
+.nose {
+  position: relative;
+  bottom: 440px;
+  right: 50px;
+}
+
+.wrapper_text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 800px;
+  left: 700px;
+}
+.one {
+  margin: 10px;
+  width: 400px;
+  height: 400px;
+}
+.one img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.two {
+  margin: 10px;
+  width: 730px;
+  height: 400px;
+}
+.two img {
+  width: 100%;
+  height: 100%;
+}
+.three {
+  margin: 10px;
+  width: 500px;
+  height: 400px;
+}
+.three img {
+  width: 100%;
+  height: 100%;
+}
+.four {
+  margin: 10px;
+  width: 630px;
+  height: 400px;
+}
+.four img {
+  width: 100%;
+  height: 100%;
+}
+.five {
+  margin: 10px;
+  width: 400px;
+  height: 400px;
+}
+.five img {
+  width: 100%;
+  height: 100%;
+}
+.six {
+  margin: 10px;
+  width: 600px;
+  height: 400px;
+}
+.six img {
+  width: 100%;
+  height: 100%;
+}
+.text {
+  height: 100px;
+}
+
+.go_default {
+  width: 400px;
+  height: 400px;
+}
+.go_default img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.barrage-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* 放在最底層 */
+  pointer-events: none; /* 禁止互動 */
+}
+
+.barrage-item {
+  position: absolute;
+  animation: moveBarrage linear infinite;
+  object-fit: contain; /* 確保圖片完整顯示 */
+  object-position: center; /* 圖片置中 */
+}
+
+/* 動畫效果：從右移到左 */
+@keyframes moveBarrage {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.0.html</title>
+    <link href="./css/1.0.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav_icon">
+        <a
+          href="file:///Users/huiziii/Desktop/%E5%AE%B9%E8%B2%8C%E8%B2%A9%E8%B3%A3%E6%A9%9F/index.html"
+          ><img src="./img/nav/nav_icon.png"
+        /></a>
+      </div>
+      <div class="nav_menu">
+        <ul>
+          <li>
+            <a
+              href="file:///Users/huiziii/Desktop/%E5%AE%B9%E8%B2%8C%E8%B2%A9%E8%B3%A3%E6%A9%9F/index.html"
+              ><img src="./img/nav/nav1_firstpage.png"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="file:///Users/huiziii/Desktop/%E5%AE%B9%E8%B2%8C%E8%B2%A9%E8%B3%A3%E6%A9%9F/index.html"
+              ><img src="./img/nav/nav2_exhibition.png"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="file:///Users/huiziii/Desktop/%E5%AE%B9%E8%B2%8C%E8%B2%A9%E8%B3%A3%E6%A9%9F/index.html"
+              ><img src="./img/nav/nav3_aboutus.png"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="boss">
+      <img src="./img/10_BOSSvend.png" />
+      <img src="./img/嘴巴講話動畫.gif" class="talk_gif" />
+      <img src="./img/10_BOSSvend_eye_left.png" class="eye_left" />
+      <img src="./img/10_BOSSvend_eye_right.png" class="eye_right" />
+      <img src="./img/10_BOSSvend_nose.png" class="nose" />
+    </div>
+
+    <div class="wrapper_text">
+      <div class="text one">
+        <img src="./img/dialog/10_dialog1.png" />
+      </div>
+      <div class="text two">
+        <img src="./img/dialog/10_dialog2.png" />
+      </div>
+      <div class="text three">
+        <img src="./img/dialog/10_dialog3.png" />
+      </div>
+      <div class="text four">
+        <img src="./img/dialog/10_dialog4.png" />
+      </div>
+      <div class="text five">
+        <img src="./img/question/10_question1.png" />
+      </div>
+      <div class="text six">
+        <img src="./img/question/10_question2.png" />
+      </div>
+      <div class="text go_default">
+        <img src="./img/go default 1.png" />
+      </div>
+    </div>
+    <div class="barrage-container"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const barrageContainer = document.querySelector(".barrage-container");
+
+        // 圖檔來源清單
+        const barrageImages = [
+          "./img/barrage/10_bg_talk1.png",
+          "./img/barrage/10_bg_talk2.png",
+          "./img/barrage/10_bg_talk3.png",
+          "./img/barrage/10_bg_talk4.png",
+          "./img/barrage/10_bg_talk5.png",
+          "./img/barrage/10_bg_talk6.png",
+          "./img/barrage/10_bg_talk7.png",
+          "./img/barrage/10_bg_talk8.png",
+          "./img/barrage/10_bg_talk9.png",
+          "./img/barrage/10_bg_talk10.png",
+          "./img/barrage/10_bg_talk11.png",
+        ];
+
+        // 避免彈幕重疊的座標記錄
+        const activeBarragePositions = [];
+
+        function generateBarrage() {
+          // 選擇隨機圖檔
+          const imgSrc =
+            barrageImages[Math.floor(Math.random() * barrageImages.length)];
+          const barrageItem = document.createElement("img");
+          barrageItem.src = imgSrc;
+          barrageItem.classList.add("barrage-item");
+
+          // 設定隨機的初始位置與動畫時間
+          let topPosition;
+          let attempts = 0;
+
+          // 確保彈幕不重疊
+          do {
+            topPosition = Math.random() * 80; // 0% ~ 80% 高度
+            attempts++;
+          } while (
+            activeBarragePositions.some(
+              (pos) => Math.abs(pos - topPosition) < 10 // 檢查是否有其他彈幕過近
+            ) &&
+            attempts < 10
+          );
+
+          // 更新記錄座標
+          activeBarragePositions.push(topPosition);
+          if (activeBarragePositions.length > 10) {
+            activeBarragePositions.shift(); // 保留最近 10 條的座標
+          }
+
+          // 調整動畫持續時間（速度變慢）
+          const animationDuration = Math.random() * 5 + 15; // 15s ~ 20s
+          barrageItem.style.top = `${topPosition}%`;
+          barrageItem.style.animationDuration = `${animationDuration}s`;
+
+          // 添加到容器中
+          barrageContainer.appendChild(barrageItem);
+
+          // 當動畫結束時移除彈幕
+          barrageItem.addEventListener("animationend", () => {
+            barrageItem.remove();
+          });
+        }
+
+        // 一進入頁面立即產生第一條彈幕
+        generateBarrage();
+
+        // 每隔 6 秒生成一條彈幕（間隔時間變長）
+        setInterval(generateBarrage, 6000);
+      });
+    </script>
+  </body>
+</html>

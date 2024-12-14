@@ -1,0 +1,1047 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background-image: url(../img/20_background-image.png) !important;
+  background-repeat: no-repeat;
+  cursor: url(../img/鼠標.png), auto;
+}
+* {
+  cursor: inherit;
+}
+nav {
+  padding: 0 60px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_menu {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 19px;
+}
+.nav_menu ul {
+  list-style-type: none;
+}
+.nav_menu ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+.nav_menu ul :last-child {
+  margin-right: 0px;
+}
+.carousel-inner {
+  position: relative;
+  top: 40px;
+  left: 390px;
+}
+.carousel {
+  position: relative;
+  bottom: 30px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 232px;
+  height: 426px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(178%);
+  cursor: url(../img/鼠標.png), auto !important;
+  pointer-events: auto;
+}
+.carousel-control-prev {
+  left: 100px !important;
+}
+.carousel-control-next {
+  right: 100px !important;
+}
+
+.carousel-inner img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.radio_style_eye {
+  width: 100px;
+  height: 100px;
+}
+.radio_style_eye img {
+  width: 100%;
+  height: 100%;
+}
+.radio_style_nose {
+  width: 90px;
+  height: 90px;
+}
+.radio_style_nose img {
+  width: 100%;
+  height: 100%;
+}
+
+.eyes {
+  display: flex;
+  width: 500px;
+  flex-wrap: wrap;
+}
+.radio_wrapper {
+  position: relative;
+  bottom: 560px;
+  left: 170px;
+  margin: 20px;
+}
+.radio_wrapper input[type="radio"] {
+  display: none;
+}
+.eye_1 {
+  width: 140px;
+  position: relative;
+  top: 5px;
+  right: 20px;
+}
+.eye_button_default {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  right: 10px;
+  bottom: -12px;
+}
+.eye_button_default img {
+  width: 100%;
+  height: 100%;
+}
+.eye_2 {
+  width: 140px;
+  position: relative;
+  right: 15px;
+  top: 5px;
+}
+.eye_3 {
+  width: 140px;
+  position: relative;
+  top: 5px;
+  right: 10px;
+}
+.eye_4 {
+  width: 140px;
+  position: relative;
+  top: 50px;
+  right: 10px;
+}
+.eye_button_default_4 {
+  position: relative;
+  top: 50px;
+}
+.eye_5 {
+  width: 140px;
+  position: relative;
+  top: 50px;
+  right: 10px;
+}
+.eye_button_default_5 {
+  position: relative;
+  top: 50px;
+}
+.eye_6 {
+  width: 140px;
+  position: relative;
+  top: 50px;
+  right: 10px;
+}
+.eye_button_default_6 {
+  position: relative;
+  top: 50px;
+}
+.eye_7 {
+  width: 140px;
+  position: relative;
+  top: 90px;
+  right: 10px;
+}
+.eye_button_default_7 {
+  position: relative;
+  top: 93px;
+}
+.eye_8 {
+  width: 140px;
+  position: relative;
+  top: 90px;
+  right: 10px;
+}
+.eye_button_default_8 {
+  position: relative;
+  top: 93px;
+}
+.eye_9 {
+  width: 140px;
+  position: relative;
+  top: 90px;
+  right: 10px;
+}
+.eye_button_default_9 {
+  position: relative;
+  top: 93px;
+}
+.noses {
+  display: flex;
+  width: 385px;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: 50px;
+  left: 80px;
+}
+.nose_1 {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  top: 25px;
+  right: 18px;
+}
+.nose_2 {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  top: 25px;
+  left: 10px;
+}
+.nose_3 {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  top: -20px;
+  right: 18px;
+}
+.nose_4 {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  left: 10px;
+  top: -20px;
+}
+.nose_5 {
+  width: 115px;
+  height: 115px;
+  position: relative;
+  top: -65px;
+  right: 25px;
+}
+.nose_6 {
+  width: 115px;
+  height: 115px;
+  position: relative;
+  top: -65px;
+  left: 5px;
+}
+
+.nose_button_default {
+  position: relative;
+  width: 130px;
+  height: 130px;
+}
+.nose_button_default img {
+  width: 100%;
+  height: 100%;
+}
+
+.nose_button_default_1 {
+  position: relative;
+  right: 30px;
+  bottom: 14px;
+}
+.nose_button_default_1 .hover {
+  position: relative;
+  bottom: 130px;
+}
+.nose_button_default_1 .active {
+  position: relative;
+  bottom: 130px;
+}
+.nose_button_default_2 {
+  position: relative;
+  bottom: 13px;
+}
+.nose_button_default_2 .hover {
+  position: relative;
+  bottom: 130px;
+}
+.nose_button_default_2 .active {
+  position: relative;
+  bottom: 130px;
+}
+.nose_button_default_3 {
+  position: relative;
+  right: 30px;
+  bottom: 58px;
+}
+.nose_button_default_3 .hover {
+  position: relative;
+  bottom: 130px;
+}
+.nose_button_default_3 .active {
+  position: relative;
+  bottom: 130px;
+}
+.nose_button_default_4 {
+  position: relative;
+  bottom: 58px;
+}
+.nose_button_default_4 .hover {
+  position: relative;
+  bottom: 130px;
+}
+.nose_button_default_4 .active {
+  position: relative;
+  bottom: 130px;
+}
+.nose_button_default_5 {
+  position: relative;
+  bottom: 100px;
+  right: 30px;
+}
+.nose_button_default_5 .hover {
+  position: relative;
+  bottom: 130px;
+}
+.nose_button_default_5 .active {
+  position: relative;
+  bottom: 130px;
+}
+.nose_button_default_6 {
+  position: relative;
+  bottom: 100px;
+}
+.nose_button_default_6 .hover {
+  position: relative;
+  bottom: 130px;
+}
+.nose_button_default_6 .active {
+  position: relative;
+  bottom: 130px;
+}
+.eyebrows {
+  display: flex;
+  width: 500px;
+  flex-wrap: wrap;
+}
+
+.eyebrow_1 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  bottom: 60px;
+  right: 20px;
+}
+.eyebrow_button_default_1 {
+  position: relative;
+  bottom: 110px;
+  left: 40px;
+}
+.eyebrow_button_default_1 .hover {
+  position: relative;
+  bottom: 49px;
+}
+.eyebrow_button_default_1 .active {
+  position: relative;
+  bottom: 49px;
+}
+.eyebrow_2 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  bottom: 60px;
+  left: 30px;
+}
+.eyebrow_button_default_2 {
+  position: relative;
+  bottom: 110px;
+  left: 40px;
+}
+.eyebrow_button_default_2 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.eyebrow_button_default_2 .active {
+  position: relative;
+  bottom: 48px;
+}
+.eyebrow_3 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  bottom: 160px;
+  right: 15px;
+}
+.eyebrow_button_default_3 {
+  position: relative;
+  bottom: 203px;
+  left: 40px;
+}
+.eyebrow_button_default_3 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.eyebrow_button_default_3 .active {
+  position: relative;
+  bottom: 48px;
+}
+.eyebrow_4 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  bottom: 160px;
+  left: 30px;
+}
+.eyebrow_button_default_4 {
+  position: relative;
+  bottom: 203px;
+  left: 40px;
+}
+.eyebrow_button_default_4 .hover {
+  position: relative;
+  bottom: 55px;
+}
+.eyebrow_button_default_4 .active {
+  position: relative;
+  bottom: 55px;
+}
+.eyebrow_5 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  bottom: 250px;
+  right: 15px;
+}
+.eyebrow_button_default_5 {
+  position: relative;
+  bottom: 295px;
+  left: 40px;
+}
+.eyebrow_button_default_5 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.eyebrow_button_default_5 .active {
+  position: relative;
+  bottom: 48px;
+}
+.eyebrow_6 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  bottom: 250px;
+  left: 30px;
+}
+.eyebrow_button_default_6 {
+  position: relative;
+  bottom: 294px;
+  left: 40px;
+}
+.eyebrow_button_default_6 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.eyebrow_button_default_6 .active {
+  position: relative;
+  bottom: 48px;
+}
+.mouthes {
+  display: flex;
+  width: 600px;
+  flex-wrap: wrap;
+  position: relative;
+  top: 50px;
+}
+.mouth_1 {
+  width: 115px;
+  height: 115px;
+  position: relative;
+  bottom: 70px;
+  right: 10px;
+}
+.mouth_button_default_1 {
+  position: relative;
+  bottom: 76px;
+  right: 15px;
+}
+.mouth_button_default_1 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_button_default_1 .active {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_2 {
+  width: 115px;
+  height: 115px;
+  position: relative;
+  bottom: 70px;
+  right: 30px;
+}
+.mouth_button_default_2 {
+  position: relative;
+  bottom: 75px;
+  right: 40px;
+}
+.mouth_button_default_2 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_button_default_2 .active {
+  position: relative;
+  bottom: 49px;
+}
+.mouth_3 {
+  width: 115px;
+  height: 115px;
+  position: relative;
+  bottom: 70px;
+  right: 60px;
+}
+.mouth_button_default_3 {
+  position: relative;
+  bottom: 75px;
+  right: 65px;
+}
+.mouth_button_default_3 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_button_default_3 .active {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_4 {
+  width: 115px;
+  height: 115px;
+  position: relative;
+  bottom: 70px;
+  right: 10px;
+}
+.mouth_button_default_4 {
+  position: relative;
+  bottom: 84px;
+  right: 15px;
+}
+.mouth_button_default_4 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_button_default_4 .active {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_5 {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  bottom: 75px;
+  right: 40px;
+}
+.mouth_button_default_5 {
+  position: relative;
+  bottom: 99px;
+  right: 40px;
+}
+.mouth_button_default_5 .hover {
+  position: relative;
+  bottom: 49px;
+}
+.mouth_button_default_5 .active {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_6 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 60px;
+  right: 60px;
+}
+.mouth_button_default_6 {
+  position: relative;
+  bottom: 69px;
+  right: 65px;
+}
+.mouth_button_default_6 .hover {
+  position: relative;
+  bottom: 49px;
+}
+.mouth_button_default_6 .active {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_7 {
+  width: 115px;
+  height: 115px;
+  position: relative;
+  bottom: 85px;
+  right: 10px;
+}
+.mouth_button_default_7 {
+  position: relative;
+  bottom: 100px;
+  right: 15px;
+}
+.mouth_button_default_7 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_button_default_7 .active {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_8 {
+  width: 115px;
+  height: 115px;
+  position: relative;
+  bottom: 83px;
+  right: 35px;
+}
+.mouth_button_default_8 {
+  position: relative;
+  bottom: 100px;
+  right: 40px;
+}
+.mouth_button_default_8 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_button_default_8 .active {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_9 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 75px;
+  right: 60px;
+}
+.mouth_button_default_9 {
+  position: relative;
+  bottom: 85px;
+  right: 65px;
+}
+.mouth_button_default_9 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.mouth_button_default_9 .active {
+  position: relative;
+  bottom: 48px;
+}
+.hair {
+  display: flex;
+  width: 600px;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: 50px;
+}
+.hair_1 {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 20px;
+  right: 15px;
+}
+.hair_button_default_1 {
+  position: relative;
+  top: -8px;
+  right: 15px;
+}
+.hair_button_default_1 .hover {
+  position: relative;
+  bottom: 48px;
+  left: 0.25px;
+}
+.hair_button_default_1 .active {
+  position: relative;
+  bottom: 48px;
+}
+.hair_2 {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 25px;
+  right: 50px;
+}
+.hair_button_default_2 {
+  position: relative;
+  top: -7px;
+  right: 40px;
+}
+.hair_button_default_2 .hover {
+  position: relative;
+  bottom: 49px;
+}
+.hair_button_default_2 .active {
+  position: relative;
+  bottom: 48px;
+}
+.hair_3 {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 35px;
+  right: 80px;
+}
+.hair_button_default_3 {
+  position: relative;
+  top: -6.5px;
+  right: 65px;
+}
+.hair_button_default_3 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.hair_button_default_3 .active {
+  position: relative;
+  bottom: 48px;
+}
+.hair_4 {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: -16px;
+  left: -10px;
+}
+.hair_button_default_4 {
+  position: relative;
+  top: -52px;
+  right: 15px;
+}
+.hair_button_default_4 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.hair_button_default_4 .active {
+  position: relative;
+  bottom: 48px;
+}
+.hair_5 {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: -13px;
+  right: 50px;
+}
+.hair_button_default_5 {
+  position: relative;
+  top: -52px;
+  right: 40px;
+}
+.hair_button_default_5 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.hair_button_default_5 .active {
+  position: relative;
+  bottom: 48px;
+}
+.hair_6 {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: -30px;
+  right: 80px;
+}
+.hair_button_default_6 {
+  position: relative;
+  top: -52px;
+  right: 65px;
+}
+.hair_button_default_6 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.hair_button_default_6 .active {
+  position: relative;
+  bottom: 48px;
+}
+.hair_7 {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: -80px;
+  right: 15px;
+}
+.hair_button_default_7 {
+  position: relative;
+  top: -90px;
+  right: 13px;
+}
+.hair_button_default_7 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.hair_button_default_7 .active {
+  position: relative;
+  bottom: 48px;
+}
+.hair_8 {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: -65px;
+  right: 50px;
+}
+.hair_button_default_8 {
+  position: relative;
+  top: -90px;
+  right: 40px;
+}
+.hair_button_default_8 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.hair_button_default_8 .active {
+  position: relative;
+  bottom: 48px;
+}
+.hair_9 {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: -60px;
+  right: 80px;
+}
+.hair_button_default_9 {
+  position: relative;
+  top: -90px;
+  right: 65px;
+}
+.hair_button_default_9 .hover {
+  position: relative;
+  bottom: 48px;
+}
+.hair_button_default_9 .active {
+  position: relative;
+  bottom: 49px;
+}
+.radio_style_eyebrow {
+  width: 130px;
+  height: 130px;
+}
+.radio_style_eyebrow img {
+  width: 100%;
+  height: 100%;
+}
+.radio_style_mouth {
+  width: 130px;
+  height: 130px;
+}
+.radio_style_mouth img {
+  width: 100%;
+  height: 100%;
+}
+.radio_style_hair {
+  width: 130px;
+  height: 130px;
+}
+.radio_style_hair img {
+  width: 100%;
+  height: 100%;
+}
+.eye_button_default img.hover {
+  display: none;
+}
+.eye_button_default:hover img.default {
+  display: none;
+}
+.eye_button_default:hover img.hover {
+  display: block;
+}
+.radio_wrapper .eye_button_default img.active {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .eye_button_default
+  img.default {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .eye_button_default
+  img.hover {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .eye_button_default
+  img.active {
+  display: block;
+}
+.nose_button_default img.hover {
+  display: none;
+}
+.nose_button_default:hover img.default {
+  display: none;
+}
+.nose_button_default:hover img.hover {
+  display: block;
+}
+.radio_wrapper .nose_button_default img.active {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .nose_button_default
+  img.default {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .nose_button_default
+  img.hover {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .nose_button_default
+  img.active {
+  display: block;
+}
+.eyebrow_button_default img.hover {
+  display: none;
+}
+.eyebrow_button_default:hover img.default {
+  display: none;
+}
+.eyebrow_button_default:hover img.hover {
+  display: block;
+}
+.radio_wrapper .eyebrow_button_default img.active {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .eyebrow_button_default
+  img.default {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .eyebrow_button_default
+  img.hover {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .eyebrow_button_default
+  img.active {
+  display: block;
+}
+.mouth_button_default img.hover {
+  display: none;
+}
+.mouth_button_default:hover img.default {
+  display: none;
+}
+.mouth_button_default:hover img.hover {
+  display: block;
+}
+.radio_wrapper .mouth_button_default img.active {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .mouth_button_default
+  img.default {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .mouth_button_default
+  img.hover {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .mouth_button_default
+  img.active {
+  display: block;
+}
+.hair_button_default img.hover {
+  display: none;
+}
+.hair_button_default:hover img.default {
+  display: none;
+}
+.hair_button_default:hover img.hover {
+  display: block;
+}
+.radio_wrapper .hair_button_default img.active {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .hair_button_default
+  img.default {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .hair_button_default
+  img.hover {
+  display: none;
+}
+.radio_wrapper
+  input[type="radio"]:checked
+  + label
+  .hair_button_default
+  img.active {
+  display: block;
+}
+
+button:disabled {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+}
+.vase {
+  position: relative;
+  top: 760px;
+  left: 50px;
+  transition: opacity 0.1s ease;
+}
+.vase.hidden {
+  opacity: 0;
+}
+.cacarousel_slide {
+  position: relative;
+  bottom: 590px;
+}
+
+#submitButton img {
+  width: 300px;
+  height: auto;
+  position: relative;
+  bottom: 1050px;
+  left: 130px;
+}
+
+#submitButton:hover img.default {
+  display: none;
+}
+
+#submitButton:hover img.hover {
+  display: block;
+}
