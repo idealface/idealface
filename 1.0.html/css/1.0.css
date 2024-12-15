@@ -207,3 +207,6 @@ button:hover img.default {
 button:hover img.hover {
   display: block;
 }
+button img.hover {
+  display: none;
+}
