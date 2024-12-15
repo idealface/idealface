@@ -2,7 +2,7 @@ html,
 body {
   height: 1080px;
   width: 1920px;
-  overflow: hidden;
+
   background-image: url(../img/20_background-image.png) !important;
   background-repeat: no-repeat;
   cursor: url(../img/鼠標.png), auto;
@@ -67,7 +67,7 @@ nav {
 }
 .carousel {
   position: relative;
-  bottom: 10px;
+  bottom: -80px;
 }
 
 .carousel-control-prev,
@@ -120,7 +120,22 @@ nav {
 .carousel-control-prev:hover img.hover {
   display: block;
 }
-
+.carousel-item-nose {
+  position: relative;
+  bottom: -7px;
+}
+.carousel-item-eyebrow {
+  position: relative;
+  bottom: -13px;
+}
+.carousel-item-mouth {
+  position: relative;
+  bottom: -13px;
+}
+.carousel-item-hair {
+  position: relative;
+  bottom: -20px;
+}
 .radio_style_eye {
   width: 100px;
   height: 100px;
@@ -1110,7 +1125,7 @@ button:disabled {
 }
 .vase {
   position: relative;
-  top: 950px;
+  top: 945px;
   left: 90px;
   transition: opacity 0.1s ease;
 }
