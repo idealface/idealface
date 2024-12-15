@@ -10,10 +10,9 @@ body {
 * {
   cursor: inherit;
 }
+/* 導航菜單 */
 nav {
-  padding: 0 60px;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  padding: 30px 60px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,6 +31,34 @@ nav {
 }
 .nav_menu ul :last-child {
   margin-right: 0px;
+}
+
+/* 按鈕樣式 */
+.nav_icon,
+.firstpage,
+.exhibition,
+.aboutus {
+  scale: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav_icon:hover,
+.firstpage:hover,
+.exhibition:hover,
+.aboutus:hover {
+  scale: 1.06;
+}
+
+/* 特殊樣式 */
+.firstpage,
+.exhibition,
+.aboutus {
+  opacity: 0.3;
+}
+.firstpage:hover,
+.exhibition:hover,
+.aboutus:hover {
+  opacity: 1;
 }
 .carousel-inner {
   position: relative;
