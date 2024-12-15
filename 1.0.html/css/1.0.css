@@ -214,11 +214,7 @@ button:hover img.hover {
 button img.hover {
   display: none;
 }
-.wrapper_text_gif {
-  position: relative;
-  left: 700px;
-  bottom: 1000px;
-}
+
 /* 動畫關鍵幀 */
 @keyframes moveUp {
   from {
@@ -238,6 +234,7 @@ button img.hover {
 }
 /* 針對 gif 和按鍵的動畫 */
 .wrapper_text_gif {
+  width: 100px;
   position: relative;
   left: 700px;
   bottom: 1200px;
