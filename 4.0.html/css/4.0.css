@@ -9,10 +9,9 @@ body {
 * {
   cursor: inherit;
 }
+/* 導航菜單 */
 nav {
-  padding: 0 60px;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  padding: 30px 60px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,34 +31,32 @@ nav {
 .nav_menu ul :last-child {
   margin-right: 0px;
 }
-.nav_icon {
-  scale: 1;
-}
-.nav_icon:hover {
-  scale: 1.06;
-}
-.firstpage {
-  scale: 1;
-  opacity: 0.3;
-}
-.firstpage:hover {
-  scale: 1.06;
-  opacity: 1;
-}
-.exhibition {
-  scale: 1;
-  opacity: 0.3;
-}
-.exhibition:hover {
-  scale: 1.06;
-  opacity: 1;
-}
+
+/* 按鈕樣式 */
+.nav_icon,
+.firstpage,
+.exhibition,
 .aboutus {
   scale: 1;
-  opacity: 0.3;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.nav_icon:hover,
+.firstpage:hover,
+.exhibition:hover,
 .aboutus:hover {
   scale: 1.06;
+}
+
+/* 特殊樣式 */
+.firstpage,
+.exhibition,
+.aboutus {
+  opacity: 0.3;
+}
+.firstpage:hover,
+.exhibition:hover,
+.aboutus:hover {
   opacity: 1;
 }
 .results {
@@ -82,54 +79,54 @@ nav {
 
 /* 單獨調整大小 */
 .image-1 {
-  width: 220px !important;
+  width: 250px !important;
   height: auto;
   position: relative;
-  top: 350px;
-  left: 660px;
+  top: 480px;
+  left: 830px;
 }
 
 .image-2 {
-  width: 65px !important;
+  width: 75px !important;
   height: auto;
   position: relative;
-  top: 300px;
-  left: 737px;
+  top: 425px;
+  left: 917px;
 }
 
 .image-3 {
   width: 240px !important;
   height: auto;
   position: relative;
-  top: 160px;
-  left: 650px;
+  top: 290px;
+  left: 835px;
 }
 
 .image-4 {
-  width: 90px !important;
+  width: 120px !important;
   height: auto;
   position: relative;
-  top: 280px;
-  right: -725px;
+  top: 400px;
+  right: -895px;
 }
 
 .image-5 {
-  width: 550px !important;
+  width: 580px !important;
   height: auto;
   position: relative;
-  right: -520px;
-  top: -200px;
+  right: -690px;
+  top: -100px;
   z-index: 0 !important;
 }
 .input_wrapper img {
   position: relative;
-  bottom: 670px;
-  left: 545px;
+  bottom: 505px;
+  left: 725px;
 }
 .text {
   position: relative;
-  bottom: 715px;
-  left: 195px;
+  bottom: 550px;
+  left: 375px;
   padding: 20px;
   width: 200px;
   border: 0.2px solid #000000;
@@ -137,16 +134,16 @@ nav {
   font-size: 20px;
 }
 .vase_left {
-  width: 300px;
+  width: 400px;
   position: relative;
-  bottom: 1060px;
-  left: 50px;
+  bottom: 1045px;
+  left: 100px;
 }
 .vase_right {
-  width: 300px;
+  width: 400px;
   position: relative;
-  bottom: 1060px;
-  left: 850px;
+  bottom: 1045px;
+  left: 950px;
 }
 /* 送出按鈕樣式 */
 .submit-button {
@@ -159,7 +156,7 @@ nav {
 .submit-button {
   position: relative;
   left: -580px;
-  top: 150px;
+  top: 180px;
 }
 .button-image {
   width: 200px;
@@ -180,27 +177,18 @@ nav {
   gap: 20px;
   margin-top: 50px;
   position: relative;
-  bottom: 450px;
-  left: 15px;
+  bottom: 300px;
 }
 
 .action-button {
-  padding: 15px 30px;
-  font-size: 18px;
   border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.action-button:hover {
-  background-color: #0056b3;
+.action-button:hover img {
   transform: scale(1.1);
 }
 
-.action-button:active {
-  background-color: #003d80;
+.action-button:active img {
   transform: scale(0.9);
 }
