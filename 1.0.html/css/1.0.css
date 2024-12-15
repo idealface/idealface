@@ -1,0 +1,270 @@
+body {
+  height: 1080px;
+  width: 1920px;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden !important;
+  background-color: #000 !important;
+  cursor: url(../img/鼠標.png), auto;
+}
+* {
+  cursor: inherit;
+}
+/* 導航菜單 */
+nav {
+  padding: 30px 60px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_menu {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 19px;
+}
+.nav_menu ul {
+  list-style-type: none;
+}
+.nav_menu ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+.nav_menu ul :last-child {
+  margin-right: 0px;
+}
+
+/* 按鈕樣式 */
+.nav_icon,
+.firstpage,
+.exhibition,
+.aboutus {
+  scale: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav_icon:hover,
+.firstpage:hover,
+.exhibition:hover,
+.aboutus:hover {
+  scale: 1.06;
+}
+
+/* 特殊樣式 */
+.firstpage,
+.exhibition,
+.aboutus {
+  opacity: 0.3;
+}
+.firstpage:hover,
+.exhibition:hover,
+.aboutus:hover {
+  opacity: 1;
+}
+.boss {
+  position: relative;
+
+  left: 30px;
+  width: 634px;
+  height: 895px;
+}
+.talk_gif {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  left: 250px;
+  bottom: 370px;
+}
+.eye_left {
+  position: relative;
+  left: 60px;
+  bottom: 470px;
+}
+.eye_right {
+  position: relative;
+  left: 90px;
+  bottom: 470px;
+}
+.nose {
+  position: relative;
+  bottom: 440px;
+  right: 50px;
+}
+
+.wrapper_text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 800px;
+  left: 700px;
+}
+.one {
+  margin: 10px;
+  width: 400px;
+  height: 400px;
+}
+.one img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.two {
+  margin: 10px;
+  width: 730px;
+  height: 400px;
+}
+.two img {
+  width: 100%;
+  height: 100%;
+}
+.three {
+  margin: 10px;
+  width: 500px;
+  height: 400px;
+}
+.three img {
+  width: 100%;
+  height: 100%;
+}
+.four {
+  margin: 10px;
+  width: 630px;
+  height: 400px;
+}
+.four img {
+  width: 100%;
+  height: 100%;
+}
+.five {
+  margin: 10px;
+  width: 400px;
+  height: 400px;
+}
+.five img {
+  width: 100%;
+  height: 100%;
+}
+.six {
+  margin: 10px;
+  width: 600px;
+  height: 400px;
+}
+.six img {
+  width: 100%;
+  height: 100%;
+}
+.text {
+  height: 100px;
+}
+
+.go_default {
+  width: 400px;
+  height: 400px;
+}
+.go_default img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.barrage-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* 放在最底層 */
+  pointer-events: none; /* 禁止互動 */
+}
+
+.barrage-item {
+  position: absolute;
+  animation: moveBarrage linear infinite;
+  object-fit: contain; /* 確保圖片完整顯示 */
+  object-position: center; /* 圖片置中 */
+}
+
+/* 動畫效果：從右移到左 */
+@keyframes moveBarrage {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+button {
+  position: relative;
+  left: 800px;
+  bottom: 50px;
+  background-color: transparent;
+  border: 0px;
+  cursor: url(../img/鼠標.png), auto !important;
+}
+
+button:hover img.default {
+  display: none;
+}
+button:hover img.hover {
+  display: block;
+}
+button img.hover {
+  display: none;
+}
+.wrapper_text_gif {
+  position: relative;
+  left: 700px;
+  bottom: 1000px;
+}
+/* 動畫關鍵幀 */
+@keyframes moveUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-600px);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1; /* 完全顯示 */
+  }
+  to {
+    opacity: 0; /* 完全透明 */
+  }
+}
+/* 針對 gif 和按鍵的動畫 */
+.wrapper_text_gif {
+  position: relative;
+  left: 700px;
+  bottom: 1200px;
+  animation: moveUp 1s ease-out 18s forwards, fadeOut 1s ease-out 18s forwards;
+}
+
+button {
+  position: relative;
+  left: 800px;
+  top: 100px;
+  background-color: transparent;
+  border: 0px;
+  cursor: url(../img/鼠標.png), auto !important;
+  animation: moveUp 1s ease-out 18s forwards;
+}
+.alert {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 550px;
+}
+button:hover img.default {
+  display: none;
+}
+button:hover img.hover {
+  display: block;
+}
+button img.hover {
+  display: none;
+}
