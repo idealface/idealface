@@ -1,10 +1,10 @@
 body {
-  width: 1920px;
   height: 1080px;
+  width: 1920px;
   display: flexbox;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: hidden !important;
   background-color: #000 !important;
   cursor: url(../img/鼠標.png), auto;
 }
@@ -197,9 +197,67 @@ nav {
   }
 }
 button {
+  position: relative;
+  left: 800px;
+  bottom: 50px;
   background-color: transparent;
   border: 0px;
   cursor: url(../img/鼠標.png), auto !important;
+}
+
+button:hover img.default {
+  display: none;
+}
+button:hover img.hover {
+  display: block;
+}
+button img.hover {
+  display: none;
+}
+.wrapper_text_gif {
+  position: relative;
+  left: 700px;
+  bottom: 1000px;
+}
+/* 動畫關鍵幀 */
+@keyframes moveUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-600px);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1; /* 完全顯示 */
+  }
+  to {
+    opacity: 0; /* 完全透明 */
+  }
+}
+/* 針對 gif 和按鍵的動畫 */
+.wrapper_text_gif {
+  position: relative;
+  left: 700px;
+  bottom: 1200px;
+  animation: moveUp 1s ease-out 18s forwards, fadeOut 1s ease-out 18s forwards;
+}
+
+button {
+  position: relative;
+  left: 800px;
+  top: 100px;
+  background-color: transparent;
+  border: 0px;
+  cursor: url(../img/鼠標.png), auto !important;
+  animation: moveUp 1s ease-out 18s forwards;
+}
+.alert {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 550px;
 }
 button:hover img.default {
   display: none;
