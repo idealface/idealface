@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.0.html</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link href="./css/1.0.css" rel="stylesheet" />
+    <link href="./img/favicon.png" rel="icon" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav_icon">
+        <a href="https://idealface.github.io/" class="index"
+          ><img src="./img/nav/nav_icon.png" alt="Site Logo"
+        /></a>
+      </div>
+      <div class="nav_menu">
+        <ul>
+          <li>
+            <a href="https://idealface.github.io/">
+              <img
+                class="firstpage"
+                src="./img/nav/nav1_firstpage_white.png"
+                alt="First Page"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="../5.0.html/5.0.html"
+              ><img
+                class="exhibition"
+                src="./img/nav/nav2_exhibition_white.png"
+                alt="Exhibition"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="../6.0.html/6.0.html"
+              ><img
+                class="aboutus"
+                src="./img/nav/nav3_aboutus_white.png"
+                alt="About US"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="boss">
+      <img src="./img/10_BOSSvend.png" />
+      <img src="./img/嘴巴講話動畫.gif" class="talk_gif" />
+      <img src="./img/10_BOSSvend_eye_left.png" class="eye_left" />
+      <img src="./img/10_BOSSvend_eye_right.png" class="eye_right" />
+      <img src="./img/10_BOSSvend_nose.png" class="nose" />
+    </div>
+      <button>
+        <div class="text go_default">
+          <img src="./img/10_go_button_default.png" class="default" />
+          <a href="../2.0.html/2.0.html">
+            <img src="./img/10_button_go_hoveractive.png" class="hover"
+          /></a>
+          <img src="./img/10_hint.png"  class="alert">
+        </div>
+      </button>
+    </div>
+    <div class="barrage-container"></div>
+
+    <div class="wrapper_text_gif">
+      <img src="./img/前導頁對話框.gif" />
+    </div>
+    <script>
+     
+  // 提前定義彈幕生成邏輯
+  const barrageImages = [
+    "./img/barrage/10_bg_talk1.png",
+    "./img/barrage/10_bg_talk2.png",
+    "./img/barrage/10_bg_talk3.png",
+    "./img/barrage/10_bg_talk4.png",
+    "./img/barrage/10_bg_talk5.png",
+    "./img/barrage/10_bg_talk6.png",
+    "./img/barrage/10_bg_talk7.png",
+    "./img/barrage/10_bg_talk8.png",
+    "./img/barrage/10_bg_talk9.png",
+    "./img/barrage/10_bg_talk10.png",
+    "./img/barrage/10_bg_talk11.png",
+  ];
+
+  const activeBarragePositions = []; // 避免彈幕重疊
+
+  function generateBarrage() {
+    const barrageContainer = document.querySelector(".barrage-container");
+    if (!barrageContainer) return; // 確保彈幕容器存在
+
+    // 隨機選擇圖檔
+    const imgSrc = barrageImages[Math.floor(Math.random() * barrageImages.length)];
+    const barrageItem = document.createElement("img");
+    barrageItem.src = imgSrc;
+    barrageItem.classList.add("barrage-item");
+
+    // 設定隨機位置與動畫時間
+    let topPosition;
+    let attempts = 0;
+
+    do {
+      topPosition = Math.random() * 80; // 隨機選擇0%-80%高度
+      attempts++;
+    } while (
+      activeBarragePositions.some(pos => Math.abs(pos - topPosition) < 10) &&
+      attempts < 10
+    );
+
+    // 更新位置記錄，限制最多記錄10個
+    activeBarragePositions.push(topPosition);
+    if (activeBarragePositions.length > 10) {
+      activeBarragePositions.shift();
+    }
+
+    // 設定動畫參數
+    const animationDuration = Math.random() * 5 + 10; // 10s ~ 15s
+    barrageItem.style.top = `${topPosition}%`;
+    barrageItem.style.animationDuration = `${animationDuration}s`;
+
+    // 添加至彈幕容器
+    barrageContainer.appendChild(barrageItem);
+
+    // 動畫結束後移除彈幕
+    barrageItem.addEventListener("animationend", () => {
+      barrageItem.remove();
+    });
+  }
+
+  // 頁面初始化時開始生成彈幕
+  document.addEventListener("DOMContentLoaded", function () {
+    // 頁面進入時立即生成多條彈幕
+    for (let i = 0; i < 5; i++) {
+      generateBarrage();
+    }
+
+    // 每3秒生成一條新的彈幕
+    setInterval(generateBarrage, 6000);
+  });
+</script>
+   
+  </body>
+</html>
