@@ -2,7 +2,7 @@ html,
 body {
   height: 1080px;
   width: 1920px;
-
+  overflow: hidden;
   background-image: url(../img/20_background-image.png) !important;
   background-repeat: no-repeat;
   cursor: url(../img/鼠標.png), auto;
