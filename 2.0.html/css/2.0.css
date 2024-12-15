@@ -65,11 +65,19 @@ nav {
   top: 40px;
   left: 480px;
 }
+nav {
+  position: relative;
+  z-index: 1;
+}
 .carousel {
   position: relative;
   bottom: -80px;
   width: 1920px;
   height: 875px;
+}
+.carousel_slide {
+  position: relative;
+  z-index: 0;
 }
 
 .carousel-control-prev,
