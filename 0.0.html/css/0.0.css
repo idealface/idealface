@@ -5,7 +5,7 @@ body {
   height: 100%;
   width: 100%;
   cursor: url(../img/鼠標.png), auto;
-  background: #000 url(../img/00_background-image.png);
+  background: #000 url(../img/00_background-image.png) no-repeat;
   overflow: hidden;
 }
 
