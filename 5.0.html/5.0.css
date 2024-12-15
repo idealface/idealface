@@ -2,7 +2,8 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  width: 1920px;
+  height: 1080px;
   cursor: url(../5.0展覽館/img/鼠標.png), auto;
   background: #000 url(../5.0.html/img/50_background-image.png);
   overflow: hidden;

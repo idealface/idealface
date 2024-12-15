@@ -2,8 +2,8 @@
 body {
   margin: 0px;
   padding: 0;
-  height: 100%;
-  width: 100%;
+  height: 1920px;
+  width: 1080px;
   cursor: url(../img/鼠標.png), auto;
   background: #000 url(../img/00_background-image.png) no-repeat;
   overflow: hidden;
