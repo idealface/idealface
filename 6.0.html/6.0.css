@@ -118,7 +118,7 @@ main#carousel {
   pointer-events: none;
   position: relative;
   bottom: 600px;
-  right: 400px;
+  right: 100px;
 }
 
 div.item {
