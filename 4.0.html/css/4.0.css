@@ -64,7 +64,7 @@ nav {
 .results {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 80%;
   bottom: 200px;
 }
 
@@ -122,7 +122,7 @@ nav {
 }
 .input_wrapper img {
   position: relative;
-  bottom: 555px;
+  bottom: px;
   left: 725px;
 }
 .text {
