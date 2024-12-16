@@ -1,0 +1,13 @@
+/* 基本樣式 */
+body {
+  background-image: url(../img/5\ 4.png);
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: url(../img/鼠標.png), auto;
+}
+* {
+  cursor: inherit;
+}
