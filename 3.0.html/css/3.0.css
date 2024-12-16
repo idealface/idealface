@@ -1,0 +1,18 @@
+/* 基本樣式 */
+body {
+  background-image: url(../img/5\ 4.png);
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: url(../img/鼠標.png), auto;
+}
+* {
+  cursor: inherit;
+}
+h1 {
+  width: 100px;
+  position: relative;
+  animation: 18s forwards, fadeOut 1s ease-out 18s forwards;
+}
