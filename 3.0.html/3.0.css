@@ -11,3 +11,8 @@ body {
 * {
   cursor: inherit;
 }
+h1 {
+  width: 100px;
+  position: relative;
+  animation: 18s forwards, fadeOut 1s ease-out 18s forwards;
+}
