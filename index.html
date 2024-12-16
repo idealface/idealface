@@ -86,5 +86,20 @@
         </div>
       </div>
     </main>
+    <script>
+    const music = new Audio("./img/music/內頁.wav");
+    music.loop = true;
+  
+    document.body.addEventListener("click", () => {
+      music.play()
+        .then(() => {
+          console.log("音樂播放成功");
+        })
+        .catch((error) => {
+          console.error("音樂播放失敗", error);
+        });
+    });
+  </script>
+  
   </body>
 </html>
