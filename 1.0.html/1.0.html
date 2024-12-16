@@ -79,79 +79,95 @@
     <div class="wrapper_text_gif">
       <img src="./img/前導頁對話框.gif" />
     </div>
+    <div class="wrapper_text_gif">
+      <img src="./img/前導頁對話框.gif" />
+    </div>
     <script>
-     
-  // 提前定義彈幕生成邏輯
-  const barrageImages = [
-    "./img/barrage/10_bg_talk1.png",
-    "./img/barrage/10_bg_talk2.png",
-    "./img/barrage/10_bg_talk3.png",
-    "./img/barrage/10_bg_talk4.png",
-    "./img/barrage/10_bg_talk5.png",
-    "./img/barrage/10_bg_talk6.png",
-    "./img/barrage/10_bg_talk7.png",
-    "./img/barrage/10_bg_talk8.png",
-    "./img/barrage/10_bg_talk9.png",
-    "./img/barrage/10_bg_talk10.png",
-    "./img/barrage/10_bg_talk11.png",
-  ];
-
-  const activeBarragePositions = []; // 避免彈幕重疊
-
-  function generateBarrage() {
-    const barrageContainer = document.querySelector(".barrage-container");
-    if (!barrageContainer) return; // 確保彈幕容器存在
-
-    // 隨機選擇圖檔
-    const imgSrc = barrageImages[Math.floor(Math.random() * barrageImages.length)];
-    const barrageItem = document.createElement("img");
-    barrageItem.src = imgSrc;
-    barrageItem.classList.add("barrage-item");
-
-    // 設定隨機位置與動畫時間
-    let topPosition;
-    let attempts = 0;
-
-    do {
-      topPosition = Math.random() * 80; // 隨機選擇0%-80%高度
-      attempts++;
-    } while (
-      activeBarragePositions.some(pos => Math.abs(pos - topPosition) < 10) &&
-      attempts < 10
-    );
-
-    // 更新位置記錄，限制最多記錄10個
-    activeBarragePositions.push(topPosition);
-    if (activeBarragePositions.length > 10) {
-      activeBarragePositions.shift();
+    // 提前定義彈幕生成邏輯
+    const barrageImages = [
+      "./img/barrage/10_bg_talk1.png",
+      "./img/barrage/10_bg_talk2.png",
+      "./img/barrage/10_bg_talk3.png",
+      "./img/barrage/10_bg_talk4.png",
+      "./img/barrage/10_bg_talk5.png",
+      "./img/barrage/10_bg_talk6.png",
+      "./img/barrage/10_bg_talk7.png",
+      "./img/barrage/10_bg_talk8.png",
+      "./img/barrage/10_bg_talk9.png",
+      "./img/barrage/10_bg_talk10.png",
+      "./img/barrage/10_bg_talk11.png",
+    ];
+  
+    const activeBarragePositions = []; // 避免彈幕重疊
+  
+    function generateBarrage() {
+      const barrageContainer = document.querySelector(".barrage-container");
+      if (!barrageContainer) return; // 確保彈幕容器存在
+  
+      // 隨機選擇圖檔
+      const imgSrc = barrageImages[Math.floor(Math.random() * barrageImages.length)];
+      const barrageItem = document.createElement("img");
+      barrageItem.src = imgSrc;
+      barrageItem.classList.add("barrage-item");
+  
+      // 設定隨機位置與動畫時間
+      let topPosition;
+      let attempts = 0;
+  
+      do {
+        topPosition = Math.random() * 80; // 隨機選擇0%-80%高度
+        attempts++;
+      } while (
+        activeBarragePositions.some(pos => Math.abs(pos - topPosition) < 10) &&
+        attempts < 10
+      );
+  
+      // 更新位置記錄，限制最多記錄10個
+      activeBarragePositions.push(topPosition);
+      if (activeBarragePositions.length > 10) {
+        activeBarragePositions.shift();
+      }
+  
+      // 設定動畫參數
+      const animationDuration = Math.random() * 5 + 10; // 10s ~ 15s
+      barrageItem.style.top = `${topPosition}%`;
+      barrageItem.style.animationDuration = `${animationDuration}s`;
+  
+      // 添加至彈幕容器
+      barrageContainer.appendChild(barrageItem);
+  
+      // 動畫結束後移除彈幕
+      barrageItem.addEventListener("animationend", () => {
+        barrageItem.remove();
+      });
     }
-
-    // 設定動畫參數
-    const animationDuration = Math.random() * 5 + 10; // 10s ~ 15s
-    barrageItem.style.top = `${topPosition}%`;
-    barrageItem.style.animationDuration = `${animationDuration}s`;
-
-    // 添加至彈幕容器
-    barrageContainer.appendChild(barrageItem);
-
-    // 動畫結束後移除彈幕
-    barrageItem.addEventListener("animationend", () => {
-      barrageItem.remove();
+  
+    // 頁面初始化時開始生成彈幕
+    document.addEventListener("DOMContentLoaded", function () {
+      // 頁面進入時立即生成多條彈幕
+      for (let i = 0; i < 5; i++) {
+        generateBarrage();
+      }
+  
+      // 每3秒生成一條新的彈幕
+      setInterval(generateBarrage, 6000);
     });
-  }
-
-  // 頁面初始化時開始生成彈幕
-  document.addEventListener("DOMContentLoaded", function () {
-    // 頁面進入時立即生成多條彈幕
-    for (let i = 0; i < 5; i++) {
-      generateBarrage();
-    }
-
-    // 每3秒生成一條新的彈幕
-    setInterval(generateBarrage, 6000);
-  });
-</script>
-
+    
+    const music = new Audio("./img/music/前導故事頁悲傷部分.wav");
+    music.loop = true;
+  
+    document.body.addEventListener("click", () => {
+      music.play()
+        .then(() => {
+          console.log("音樂播放成功");
+        })
+        .catch((error) => {
+          console.error("音樂播放失敗", error);
+        });
+    });
+  
+    
+  </script>
    
   </body>
 </html>
