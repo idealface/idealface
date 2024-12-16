@@ -162,3 +162,35 @@ document.addEventListener("DOMContentLoaded", function () {
   if (prevIcon) prevIcon.style.display = "none"; // 隱藏預設的左按鈕圖示
   if (nextIcon) nextIcon.style.display = "none"; // 隱藏預設的右按鈕圖示
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const allRadios = document.querySelectorAll('input[type="radio"]');
+  const audio = new Audio("./sound/點擊聲.wav"); // 音效檔案路徑
+
+  // 為每個 radio 添加 change 事件監聽器
+  allRadios.forEach((radio) => {
+    radio.addEventListener("change", () => {
+      // 播放音效
+      audio.currentTime = 0; // 確保每次點擊都從頭播放
+      audio.play();
+    });
+  });
+});
+document.addEventListener("mousemove", playMusicOnMouseMove);
+
+// 設定初始狀態，避免重複播放
+let musicPlayed = false;
+
+function playMusicOnMouseMove() {
+  if (!musicPlayed) {
+    const music = document.getElementById("backgroundMusic");
+    music
+      .play()
+      .then(() => {
+        musicPlayed = true; // 設定為已播放
+        console.log("音樂已播放");
+      })
+      .catch((error) => {
+        console.error("音樂播放失敗", error);
+      });
+  }
+}
