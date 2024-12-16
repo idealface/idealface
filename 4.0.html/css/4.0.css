@@ -11,6 +11,70 @@ body {
 * {
   cursor: inherit;
 }
+/* 導航菜單 */
+nav {
+  padding: 30px 60px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_menu {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 19px;
+}
+.nav_menu ul {
+  list-style-type: none;
+}
+.nav_menu ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+.nav_menu ul :last-child {
+  margin-right: 0px;
+}
+
+/* 按鈕樣式 */
+.nav_icon,
+.firstpage,
+.exhibition,
+.aboutus {
+  scale: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav_icon:hover,
+.firstpage:hover,
+.exhibition:hover,
+.aboutus:hover {
+  scale: 1.06;
+}
+
+/* 特殊樣式 */
+.firstpage,
+.exhibition,
+.aboutus {
+  opacity: 0.3;
+}
+.firstpage:hover,
+.exhibition:hover,
+.aboutus:hover {
+  opacity: 1;
+}
+
+/* 基本樣式 */
+body {
+  background-image: url(../img/5\ 4.png);
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: url(../img/鼠標.png), auto;
+}
+* {
+  cursor: inherit;
+}
 nav {
   padding: 0 60px;
   margin-top: 30px;
@@ -141,13 +205,13 @@ nav {
 .vase_left {
   width: 400px;
   position: relative;
-  bottom: 1045px;
+  bottom: 1000px;
   left: 100px;
 }
 .vase_right {
   width: 400px;
   position: relative;
-  bottom: 1045px;
+  bottom: 1000px;
   left: 950px;
 }
 /* 送出按鈕樣式 */
@@ -196,4 +260,71 @@ nav {
 
 .action-button:active img {
   transform: scale(0.9);
+}
+.submit-button:disabled {
+  opacity: 0.5;
+}
+.popup-container {
+  position: relative;
+  transform: translateY(-360%);
+  left: 100px;
+  width: 50%;
+  height: 50%;
+  z-index: 10000;
+  cursor: url(../img/鼠標.png), auto;
+  animation: popup-show 0.3s ease; /* 彈出動畫 */
+}
+.popup-hide {
+  animation: popup-hide 0.3s ease forwards; /* 隱藏動畫 */
+}
+
+.close-button {
+  position: absolute;
+  top: 40px;
+  right: -650px;
+  background: #ff00a4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+  cursor: url(../img/鼠標.png), auto;
+}
+
+.close-button:hover {
+  background: rgb(255, 153, 236);
+}
+
+/* 彈出動畫 */
+@keyframes popup-show {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 隱藏動畫 */
+@keyframes popup-hide {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+.container {
+  position: relative;
+  bottom: 100px;
 }

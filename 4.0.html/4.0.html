@@ -99,9 +99,6 @@
         resultDiv.appendChild(img);
         resultsContainer.appendChild(resultDiv);
       }
-    } else {
-      resultsContainer.innerHTML =
-        "<p>無法顯示結果，請返回上一頁重新選擇。</p>";
     }
   }
 
@@ -109,15 +106,49 @@
   function handleNameSubmission() {
     const inputValue = inputField.value.trim(); // 去除空格
     if (inputValue) {
-      
+      submitButton.disabled = true; // 禁用送出按鈕
+      showPopup(); // 顯示彈跳視窗
+    }
+  }
 
-      // 隱藏輸入框及裝飾
-      inputWrapper.style.display = "none";
-      decorationDiv.style.display = "none";
+  // 顯示彈跳視窗
+  function showPopup() {
+    // 創建彈跳視窗的容器
+    const popupContainer = document.createElement("div");
+    popupContainer.classList.add("popup-container");
 
-      // 顯示操作按鈕
-      createActionButtons();
-    } 
+    // 創建彈跳內容區
+    const popupContent = document.createElement("div");
+    popupContent.classList.add("popup-content");
+
+    // 添加圖片作為彈跳內容
+    const popupImage = document.createElement("img");
+    popupImage.src = "./img/pop.png"; // 替換為您的彈跳視窗圖片路徑
+    popupImage.alt = "彈跳視窗圖片";
+    popupImage.classList.add("popup-image");
+
+    // 創建右上角的關閉按鈕
+    const closeButton = document.createElement("button");
+    closeButton.classList.add("close-button");
+    closeButton.textContent = "X";
+    closeButton.addEventListener("click", function () {
+      popupContainer.classList.add("popup-hide"); // 加入隱藏動畫
+      setTimeout(() => {
+        popupContainer.remove(); // 動畫結束後移除視窗
+        inputWrapper.style.display = "none";
+        decorationDiv.style.display = "none";
+        createActionButtons(); // 顯示操作按鈕
+        submitButton.disabled = false; // 啟用送出按鈕
+      }, 300); // 與動畫時長一致
+    });
+
+    // 將圖片和關閉按鈕添加到彈跳內容
+    popupContent.appendChild(closeButton);
+    popupContent.appendChild(popupImage);
+
+    // 將彈跳內容添加到容器
+    popupContainer.appendChild(popupContent);
+    document.body.appendChild(popupContainer); // 將彈跳視窗添加到頁面
   }
 
   // 創建操作按鈕 (回首頁、再玩一次、展覽館)
@@ -130,17 +161,17 @@
       {
         src: "./img/button/40_button_backtohome_default.png",
         alt: "回首頁",
-        clickHandler: () => (window.location.href = "/0.0.html/index.html"),
+        clickHandler: () => (window.location.href = "../0.0.html/index.html"),
       },
       {
         src: "./img/button/40_button_playagain_default.png",
         alt: "再玩一次",
-        clickHandler: () => (window.location.href = "/2.0.html/2.0.html"),
+        clickHandler: () => (window.location.href = "../2.0.html/2.0.html"),
       },
       {
         src: "./img/button/40_button_museum_default.png",
         alt: "展覽館",
-        clickHandler: () => (window.location.href = "/5.0.html/5.0.html"),
+        clickHandler: () => (window.location.href = "../5.0.html/5.0.html"),
       },
     ];
 
@@ -164,6 +195,7 @@
   // 初始化顯示結果
   displayResults();
 });
+
 
     </script>
   </body>
