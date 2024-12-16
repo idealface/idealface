@@ -122,12 +122,12 @@ nav {
 }
 .input_wrapper img {
   position: relative;
-  bottom: px;
+  bottom: 750px;
   left: 700px;
 }
 .text {
   position: relative;
-  bottom: 745px;
+  bottom: 795px;
   left: 375px;
   padding: 20px;
   width: 200px;
