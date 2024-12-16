@@ -201,8 +201,8 @@ nav {
   position: relative;
   transform: translateY(-360%);
   left: 100px;
-  width: 50%;
-  height: 50%;
+  width: 45%;
+  height: 45%;
   z-index: 10000;
   cursor: url(../img/鼠標.png), auto;
   animation: popup-show 0.3s ease; /* 彈出動畫 */
