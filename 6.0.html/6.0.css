@@ -111,14 +111,14 @@ main#carousel {
   justify-content: center;
   overflow: hidden;
   transform-style: preserve-3d;
-  perspective: 600px;
+  perspective: 400px;
   --items: 5;
   --middle: 3;
   --position: 1;
   pointer-events: none;
   position: relative;
   bottom: 600px;
-  right: 450px;
+  right: 400px;
 }
 
 div.item {
