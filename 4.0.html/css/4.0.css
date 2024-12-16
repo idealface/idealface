@@ -199,7 +199,7 @@ nav {
 }
 .popup-container {
   position: relative;
-  transform: translateY(-370%);
+  transform: translateY(-400%);
   left: 150px;
   width: 40%;
   height: 40%;
@@ -214,7 +214,7 @@ nav {
 .close-button {
   position: absolute;
   top: 40px;
-  right: -650px;
+  right: -750px;
   background: #ff00a4;
   color: white;
   border: none;
