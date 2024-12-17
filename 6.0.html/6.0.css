@@ -4,7 +4,7 @@ body {
   padding: 0;
   height: 1080px;
   width: 1920px;
-  cursor: url(../6.0關於我們/img/鼠標.png), auto;
+  cursor: url(./img/鼠標.png), auto !important;
   background-image: url(./img/60_background-image.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -111,14 +111,14 @@ main#carousel {
   justify-content: center;
   overflow: hidden;
   transform-style: preserve-3d;
-  perspective: 400px;
+  perspective: 600px;
   --items: 5;
   --middle: 3;
   --position: 1;
   pointer-events: none;
   position: relative;
   bottom: 600px;
-  right: 100px;
+  right: -100px;
 }
 
 div.item {
@@ -151,7 +151,9 @@ div.item:nth-of-type(4) {
 div.item:nth-of-type(5) {
   --offset: 5;
 }
-
+div.item:nth-of-type(6) {
+  --offset: 6;
+}
 input:nth-of-type(1) {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -191,6 +193,13 @@ input:nth-of-type(5) {
 }
 input:nth-of-type(5):checked ~ main#carousel {
   --position: 5;
+}
+input:nth-of-type(6) {
+  grid-column: 7 / 8;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ main#carousel {
+  --position: 6;
 }
 input {
   position: relative;
